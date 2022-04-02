@@ -14,9 +14,9 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
-import recommonmark
+#import recommonmark
 #import sphinx_markdown_tables
-from recommonmark.transform import AutoStructify
+#from recommonmark.transform import AutoStructify
 
 
 # -- Project information -----------------------------------------------------
@@ -25,10 +25,6 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 project = 'onceking1996'
 copyright = '2022, onceking'
 author = 'onceking'
-from recommonmark.parser import CommonMarkParser
-source_parsers = {
-    '.md': CommonMarkParser,
-}
 source_suffix = ['.rst', '.md']
 # The full version, including alpha/beta/rc tags
 release = 'v1'
@@ -39,9 +35,7 @@ release = 'v1'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [
-'recommonmark'
-]
+extensions = []
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
