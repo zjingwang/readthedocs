@@ -1,5 +1,5 @@
 .. onceking1996 documentation master file, created by
-   sphinx-quickstart on Sat Apr  2 14:38:22 2022.
+   sphinx-quickstart on Sat Apr  2 15:05:11 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
