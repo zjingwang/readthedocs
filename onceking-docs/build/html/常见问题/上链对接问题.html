@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>&lt;no title&gt; &mdash; onceking1996 v1 文档</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> onceking1996
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul class="simple">
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">onceking1996</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>&lt;no title&gt;</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/常见问题/上链对接问题.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p><strong>发起交易后返回交易hash在区块链浏览器中查询不到？</strong></p>
+<p>交易是异步上链的，区块链浏览器中查询不到说明上链失败，需要发起成功返回交易hash后通过查询交易回执来判断是否成功</p>
+<p><strong>IDE 点击预估返回104燃料不足是什么原因？</strong></p>
+<p>点击预估后，会对链账户燃料进行校验，如果不足则会返回错误。</p>
+<p><strong>cloud IDE部署合约勾选正式部署和不勾选有什么区别？</strong></p>
+<p>无论是否勾选，都属于部署到链上，都会消耗Gas。勾选正式部署后，该次合约会被记录到部署记录中，后续可以根据记录调用。</p>
+<p><strong>Gas在sdk调用过程中如何传值？</strong></p>
+<p>Gas燃料消耗是根据交易复杂度进行变化的，目前暂时无法通过公式计算。可以通过cloud IDE点击预估按钮进行预估大致的消耗。同时sdk调用过程中传入的数值为该笔交易最大消耗的燃料。如果小于设置的值，扣除燃料按实际消耗的扣除，如果大于设置的值，则该笔交易失败，并且燃料不予返还，同时设置的Gas参数应小于链账户所拥有的燃料。</p>
+<p><strong>调用合约过程中出现10201错误是什么原因？</strong></p>
+<p>该错误的原因为调用合约过程中有参数入参格式有错误。</p>
+<ul class="simple">
+<li><p><strong>methodSignature</strong>：该参数需填写合约中的方法名，其中不能带空格以及完整入参变量名(如:uint256)，只需要方法名+入参类型即可。如：setuser(string,uint256)</p></li>
+<li><p><strong>inputParamListStr</strong>：该参数为methodSignature方法中定义的具体参数，以setuser(string,uint256)为例，需要传入[zhangsan,20]即可</p></li>
+</ul>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, onceking.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
