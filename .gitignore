@@ -13,10 +13,8 @@ pom.xml.versionsBackup
 .project
 .settings/
 
-##sphinx build文件
+##sphinx
 build/
-_static
-_template
 
 
 #log
