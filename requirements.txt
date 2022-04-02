@@ -1,7 +1,7 @@
 # markdown suport
 recommonmark
 # markdown table suport
-sphinx-markdown-tables
+sphinx_markdown_tables
 
 # theme default rtd
 
