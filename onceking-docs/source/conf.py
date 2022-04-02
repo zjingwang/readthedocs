@@ -15,7 +15,7 @@
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
 import recommonmark
-import sphinx_markdown_tables
+#import sphinx_markdown_tables
 from recommonmark.transform import AutoStructify
 
 
@@ -40,8 +40,7 @@ release = 'v1'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-'recommonmark',
-'sphinx_markdown_tables'
+'recommonmark'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
