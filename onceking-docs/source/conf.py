@@ -16,14 +16,13 @@
 import sphinx_rtd_theme
 import myst_parser
 import sphinx_markdown_tables
-from recommonmark.transform import AutoStructify
 
 
 # -- Project information -----------------------------------------------------
 html_theme = "sphinx_rtd_theme"
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 project = 'onceking1996'
-copyright = '2022, onceking'
+copyright = u'2022-2023, 作者：onceking'
 author = 'onceking'
 source_suffix = ['.rst', '.md']
 # The full version, including alpha/beta/rc tags
@@ -66,3 +65,4 @@ language = 'zh_CN'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_show_sphinx = False
+html_last_updated_fmt = '%x'

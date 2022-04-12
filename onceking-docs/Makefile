@@ -5,8 +5,14 @@
 # from the environment for the first two.
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
+SPHINXAUTOBUILD   ?= sphinx-autobuild
 SOURCEDIR     = source
-BUILDDIR      = build
+#build directory
+BUILDDIR      = build/html
+#doctree directory
+DOCOPTIONS   = -d build/doctrees
+#sphinx-autobuild options --port=0 means search free port, --open-browser means open browser in 5s
+LIVEOPTIONS  = --port=0 --open-browser -d=build/doctrees
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -18,3 +24,7 @@ help:
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
 %: Makefile
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
+
+livehtml:
+	$(SPHINXAUTOBUILD) $(SOURCEDIR)  $(BUILDDIR) $(LIVEOPTIONS)
+
