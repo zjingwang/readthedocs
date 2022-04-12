@@ -1,20 +1,16 @@
-.. onceking documentation master file, created by
-   sphinx-quickstart on Wed Apr  6 14:04:50 2022.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to onceking's documentation!
-=====================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   :maxdepth: 1
+   :caption: 学习记录:
+   :numbered:
+   :glob:
+   
+   learningRecord/*
+   
+.. toctree::
+   :maxdepth: 1
+   :caption: 杂谈:
+   :numbered:
+   :glob:
+   
+   chat/*
